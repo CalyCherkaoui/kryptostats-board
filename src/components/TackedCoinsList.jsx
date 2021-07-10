@@ -13,7 +13,7 @@ const TackedCoinsList = () => {
         const response = await coinGecko.get('coins/markets', {
           params: {
             vs_currency: 'usd',
-            ids: 'bitcoin,ethereum',
+            ids: CoinsList.join(','),
           },
         });
 
