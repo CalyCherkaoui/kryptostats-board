@@ -15,6 +15,9 @@ function Navigation() {
         <li className="nav_item">
           <Link to="/item" className="nav_link">Item</Link>
         </li>
+        <li className="nav_item">
+          <Link to="/tracked" className="nav_link">Tracked Items</Link>
+        </li>
       </ul>
     </div>
   );
