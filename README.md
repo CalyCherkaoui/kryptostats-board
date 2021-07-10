@@ -1,44 +1,151 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Kryptostats-board : a catalogue of statistics for Cryptocurrencies data
 
-## Available Scripts
+## About the project
+In this project, I built the front-end side of a catalogue of statistics to display general Cryptocurrencies data.
+The App collects data from an API and displays it in a list of data that can be filtered by character and/or market parameters.
+This project was built following the specifications and user stories given here:
+[Click here to read the projects specifications](https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5)
 
-In the project directory, you can run:
+## Built with
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img width="5%" src="https://media.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif" alt="Javascript"></a>
+  <a href="#"><img width="10%" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="React"></a>
+  <a href="#"><img width="5%" src="https://raw.githubusercontent.com/detain/svg-logos/master/svg/redux.svg" alt="Redux"></a>
+  <a href="#"><img width="10%" src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg"></a>
+  <a href="#"><img width="30px" src="https://cdn.svgporn.com/logos/html-5.svg"></a>
+  <a href="#"><img width="30px" src="https://cdn.svgporn.com/logos/css-3.svg"></a>
+  <a href="https://github.com/"><img width="5%" src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" alt="GitHub"></a>
+  <a href="#"><img width="10%" src="https://media.giphy.com/media/kH6CqYiquZawmU1HI6/giphy.gif"></a>
+  <a href="#"><img width="5%" src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp"></a>
+  <br>
 
-### `yarn start`
+## Table of content
+- [About the project](#about-the-project)
+- [Built with](#built-with)
+- [Live demo](#live-demo)
+- [Walkthrough Video presentation](#walkthrough-video-presentation)
+- [Screenshots](#screenshots)
+- [Dependencies](#dependencies)
+- [Linting tools](#linting-tools)
+- [Getting started](#getting-started-in-development)
+- [Author](#author)
+- [Contributing](#-Contributing)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live demo
+[Link to the deployed app](https://kryptonite-catalogue.herokuapp.com/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Walkthrough video presentation
+[Check here the Video presentation]()
 
-### `yarn test`
+## Screenshots
+<br>
+<img width="380" src="./screenshots/gameScreenShot1.png"><img width="380" src="./screenshots/gameScreenShot2.png">
+<br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies
+Iportant Gems and dependencies used in this web application:
 
-### `yarn build`
+<table>
+  <tr>
+    <th>Dependency</th>
+    <th>for</th>
+    <th>Development</th>
+    <th>Test</th>
+    <th>Production</th>
+  </tr>
+  <tr>
+    <td>React</td>
+    <td>JS library for building user interfaces</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Redux</td>
+    <td>A Predictable State Container</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Prop-types</td>
+    <td>Runtime type checking for React props</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>stylelint</td>
+    <td>Css linter</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>eslint</td>
+    <td>Javascript linter</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Linting tools
+<table>
+  <tr>
+    <th>Linter</th>
+    <th>Use</th>
+    <th>Files</th>
+  </tr>
+  <tr>
+    <td>eslintrc</td>
+    <td>Linting Javascript files</td>
+    <td>.js</td>
+  </tr>
+    <tr>
+    <td>Stylelint</td>
+    <td>Linting styling errors</td>
+    <td>.css .scss</td>
+  </tr>
+</table>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Getting started in development
+To get a local copy of the repository please run the following commands on your terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ git clone git@github.com:CalyCherkaoui/kryptostats-board.git
+$ cd kryptostats-board
+$ git branch feature
+$ git checkout feature
+$ npm install
+$ npm run build
+$ npm start
+```
 
-### `yarn eject`
+To lint your Js code:
+```
+$ npx eslint . --fix
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To lint you Style sheets:
+```
+$ npx stylelint "**/*.{css,scss}" --fix
+```
+## Author
+👤 **Houda Cherkaoui**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Github: [@CalyCherkaoui](https://github.com/CalyCherkaoui)
+- Twitter: [@Houda59579688](https://twitter.com/Houda59579688)
+- Linkedin: [Houda-Cherkaoui](https://www.linkedin.com/in/houda-cherkaoui-64106395/)
+## Contributing
+Contributions, issues and feature requests are welcome!
+## Show your support
+Give a ⭐️ if you like this project!
+## Acknowledgments
+- Hat tip to [stackoverflow](https://stackoverflow.com) comunity.
+- Hat tip to [Microverse](https://www.microverse.org/) TSE for Code Review.
+- Hat tip to anyone whose code was used
+## 📝 License
+All source codeis available jointly under the MIT License.
+See [MIT licence](./LICENSE) for details.
