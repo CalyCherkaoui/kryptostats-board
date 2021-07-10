@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
-/* eslint-disable arrow-body-style */
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import coinGecko from '../apis/coinGecko';
+import { TrackedCoinsListContext } from '../context/TrackedCoinsContext';
 
 const TackedCoinsList = () => {
   // const [coins, setCoins] = useState([]);
+  const { CoinsList } = useContext(TrackedCoinsListContext);
+  console.log(CoinsList);
   useEffect(
     () => {
       const fetchData = async () => {
