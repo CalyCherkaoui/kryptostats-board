@@ -1,10 +1,11 @@
 import React from 'react';
+import IndexCoinsList from '../components/IndexCoinsList';
 
 // eslint-disable-next-line arrow-body-style
 const CoinsIndexPage = () => {
   return (
     <div>
-      Coins index page
+      <IndexCoinsList />
     </div>
   );
 };
