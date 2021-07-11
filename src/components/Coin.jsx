@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -6,7 +7,7 @@ import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 import { GrAddCircle } from 'react-icons/gr';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 
-const Coin = ({ coin, indexList }) => {
+const Coin = ({ coin, indexList, deleteCoin }) => {
   const upDownIconRender = () => {
     if (coin.price_change_percentage_24h >= 0) {
       return (
@@ -25,15 +26,29 @@ const Coin = ({ coin, indexList }) => {
   const btnIconRender = () => {
     if (indexList) {
       return (
-        <IconContext.Provider value={{ color: 'green', className: 'add_icon' }}>
-          <GrAddCircle />
-        </IconContext.Provider>
+        <button className="coinlist_item_btn" type="button">
+          <IconContext.Provider value={{ color: 'green', className: 'add_icon' }}>
+            <GrAddCircle />
+          </IconContext.Provider>
+        </button>
       );
     }
     return (
-      <IconContext.Provider value={{ color: 'red', className: 'close_icon' }}>
-        <AiOutlineCloseCircle />
-      </IconContext.Provider>
+      <button
+        className="coinlist_item_btn"
+        type="button"
+        onClick={
+          (e) => {
+            e.preventDefault();
+            deleteCoin(coin.id);
+            console.log('deleted');
+          }
+        }
+      >
+        <IconContext.Provider value={{ color: 'red', className: 'close_icon' }}>
+          <AiOutlineCloseCircle />
+        </IconContext.Provider>
+      </button>
     );
   };
   return (
@@ -47,9 +62,7 @@ const Coin = ({ coin, indexList }) => {
           </i>
           {coin.price_change_percentage_24h}
         </span>
-        <button className="coinlist_item_btn" type="button">
-          { btnIconRender() }
-        </button>
+        { btnIconRender() }
       </li>
     </Link>
   );
@@ -58,6 +71,7 @@ const Coin = ({ coin, indexList }) => {
 Coin.propTypes = {
   coin: PropTypes.shape(
     {
+      id: PropTypes.number,
       name: PropTypes.string,
       image: PropTypes.string,
       current_price: PropTypes.number,
@@ -65,6 +79,7 @@ Coin.propTypes = {
     },
   ).isRequired,
   indexList: PropTypes.bool.isRequired,
+  deleteCoin: PropTypes.func.isRequired,
 };
 
 export default Coin;
