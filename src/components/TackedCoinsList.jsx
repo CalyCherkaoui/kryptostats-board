@@ -8,7 +8,7 @@ import Coin from './Coin';
 const TackedCoinsList = () => {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { CoinsList } = useContext(TrackedCoinsListContext);
+  const { CoinsList, deleteCoin } = useContext(TrackedCoinsListContext);
   console.log(CoinsList);
   useEffect(
     () => {
@@ -25,9 +25,13 @@ const TackedCoinsList = () => {
         console.log(response.data);
         console.log(isLoading);
       };
-      fetchData();
+      if (CoinsList.length > 0) {
+        fetchData();
+      } else {
+        setCoins([]);
+      }
     },
-    [], // fetch the data once
+    [CoinsList], // every time CoinsList updats we render this use effect
   );
 
   const renderCoins = () => {
@@ -37,7 +41,7 @@ const TackedCoinsList = () => {
     return (
       <ul className="coins_list">
         {coins.map(
-          (coin) => <Coin key={coin.id} coin={coin} indexList={false} />,
+          (coin) => <Coin key={coin.id} coin={coin} indexList={false} deleteCoin={deleteCoin} />,
         )}
       </ul>
     );

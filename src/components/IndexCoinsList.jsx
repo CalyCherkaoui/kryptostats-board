@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { TrackedCoinsListContext } from '../context/TrackedCoinsContext';
 import coinGecko from '../apis/coinGecko';
 import Coin from './Coin';
 
 const IndexCoinsList = () => {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const { CoinsList, addCoin } = useContext(TrackedCoinsListContext);
   useEffect(
     () => {
       const fetchData = async () => {
@@ -26,7 +28,7 @@ const IndexCoinsList = () => {
       };
       fetchData();
     },
-    [],
+    [CoinsList],
   );
   const renderCoins = () => {
     if (isLoading) {
@@ -35,7 +37,15 @@ const IndexCoinsList = () => {
     return (
       <ul className="coins_list">
         {coins.map(
-          (coin) => <Coin key={coin.id} coin={coin} indexList />,
+          (coin) => (
+            <Coin
+              key={coin.id}
+              coin={coin}
+              indexList
+              deleteCoin={() => false}
+              addCoin={addCoin}
+            />
+          ),
         )}
       </ul>
     );
