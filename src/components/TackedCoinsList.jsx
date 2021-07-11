@@ -3,6 +3,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import coinGecko from '../apis/coinGecko';
 import { TrackedCoinsListContext } from '../context/TrackedCoinsContext';
+import Coin from './Coin';
 
 const TackedCoinsList = () => {
   const [coins, setCoins] = useState([]);
