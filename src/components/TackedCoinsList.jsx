@@ -37,7 +37,7 @@ const TackedCoinsList = () => {
     return (
       <ul className="coins_list">
         {coins.map(
-          (coin) => <Coin key={coin.id} coin={coin} />,
+          (coin) => <Coin key={coin.id} coin={coin} indexList={false} />,
         )}
       </ul>
     );
