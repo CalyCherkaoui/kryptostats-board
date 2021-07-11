@@ -25,9 +25,13 @@ const TackedCoinsList = () => {
         console.log(response.data);
         console.log(isLoading);
       };
-      fetchData();
+      if (CoinsList.length > 0) {
+        fetchData();
+      } else {
+        setCoins([]);
+      }
     },
-    [], // fetch the data once
+    [CoinsList], // every time CoinsList updats we render this use effect
   );
 
   const renderCoins = () => {

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
@@ -11,11 +12,18 @@ export const TrackedCoinsListContextProvider = (props) => {
   console.log(props.children);
 
   const deleteCoin = (coin) => {
+    setCoinsList(CoinsList.filter(
+      (element) => element !== coin,
+    ));
+  };
 
+  const addCoin = (coin) => {
+    // setCoinsList(CoinsList.push(coin));
+    console.log(coin);
   };
 
   return (
-    <TrackedCoinsListContext.Provider value={{ CoinsList, deleteCoin }}>
+    <TrackedCoinsListContext.Provider value={{ CoinsList, deleteCoin, addCoin }}>
       {props.children}
     </TrackedCoinsListContext.Provider>
   );

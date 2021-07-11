@@ -7,7 +7,12 @@ import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 import { GrAddCircle } from 'react-icons/gr';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 
-const Coin = ({ coin, indexList, deleteCoin }) => {
+const Coin = ({
+  coin,
+  indexList,
+  deleteCoin,
+  addCoin,
+}) => {
   const upDownIconRender = () => {
     if (coin.price_change_percentage_24h >= 0) {
       return (
@@ -26,7 +31,17 @@ const Coin = ({ coin, indexList, deleteCoin }) => {
   const btnIconRender = () => {
     if (indexList) {
       return (
-        <button className="coinlist_item_btn" type="button">
+        <button
+          className="coinlist_item_btn"
+          type="button"
+          onClick={
+            (e) => {
+              e.preventDefault();
+              addCoin(coin.id);
+              console.log('added');
+            }
+          }
+        >
           <IconContext.Provider value={{ color: 'green', className: 'add_icon' }}>
             <GrAddCircle />
           </IconContext.Provider>
@@ -80,6 +95,7 @@ Coin.propTypes = {
   ).isRequired,
   indexList: PropTypes.bool.isRequired,
   deleteCoin: PropTypes.func.isRequired,
+  addCoin: PropTypes.func.isRequired,
 };
 
 export default Coin;
