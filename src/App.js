@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/item" component={CoinDetailPage} />
           <Route exact path="/tracked" component={TrackedCoinsPage} />
-          <Route path="/coininfo/:id" component={CoinDetailPage} />
+          <Route path="/coininfo/:coinid" component={CoinDetailPage} />
         </BrowserRouter>
       </TrackedCoinsListContextProvider>
     </div>
