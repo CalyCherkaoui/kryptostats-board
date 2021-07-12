@@ -67,7 +67,7 @@ const Coin = ({
     );
   };
   return (
-    <Link to="/coininfo">
+    <Link to={`/coininfo/${coin.id}`}>
       <li className="coinlist_item">
         <img src={coin.image} alt={coin.name} className="coinlist_item_image" />
         <span className="coinlist_item_price">{coin.current_price}</span>
