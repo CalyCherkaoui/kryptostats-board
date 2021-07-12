@@ -13,7 +13,7 @@ const IndexCoinsList = () => {
     () => {
       const fetchData = async () => {
         setIsLoading(true);
-        const response = await coinGecko.get('coins/markets', {
+        const response = await coinGecko.get('/coins/markets', {
           params: {
             vs_currency: 'eur',
             per_page: 5,

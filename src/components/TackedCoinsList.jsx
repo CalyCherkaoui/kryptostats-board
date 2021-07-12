@@ -14,7 +14,7 @@ const TackedCoinsList = () => {
     () => {
       const fetchData = async () => {
         setIsLoading(true);
-        const response = await coinGecko.get('coins/markets', {
+        const response = await coinGecko.get('/coins/markets', {
           params: {
             vs_currency: 'usd',
             ids: CoinsList.join(','),
