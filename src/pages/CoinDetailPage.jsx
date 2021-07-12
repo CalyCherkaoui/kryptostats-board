@@ -15,7 +15,7 @@ const CoinDetailPage = () => {
       const fetchData = async () => {
         setIsLoading(true);
         const [
-          day, week, year, info,
+          day, week, year, info, description,
         ] = await Promise.all([
           coinGecko.get(`coins/${coinid}/market_chart`, {
             params: {
@@ -38,6 +38,15 @@ const CoinDetailPage = () => {
               days: '365',
             },
           }),
+          coinGecko.get('/coins/markets', {
+            params: {
+              id: coinid,
+              vs_currency: 'usd',
+              per_page: 5,
+              page: '1',
+              price_change_percentage: '24h',
+            },
+          }),
           coinGecko.get(`coins/${coinid}`, {
             params: {
               tickers: false,
@@ -53,13 +62,14 @@ const CoinDetailPage = () => {
           day: day.data.prices,
           week: week.data.prices,
           year: year.data.prices,
-          infoImage: info.data.image.small,
-          infoCurrentPrice: info.data.market_data.current_price.usd,
-          infoChange24: info.data.market_data.price_change_24h_in_currency.usd,
-          infoVolume: info.data.market_data.total_volume.usd,
-          infoName: info.data.name,
-          infoSymbol: info.data.symbol,
-          infoDescription: info.data.description.en,
+          info: info.data[0],
+          infoImage: info.data[0].image,
+          infoCurrentPrice: info.data[0].current_price,
+          infoChange24: info.data[0].price_change_percentage_24h,
+          infoVolume: info.data[0].total_volume,
+          infoName: info.data[0].name,
+          infoSymbol: info.data[0].symbol,
+          infoDescription: description.data.description.en,
         });
         setIsLoading(false);
       };

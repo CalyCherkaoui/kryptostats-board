@@ -15,7 +15,7 @@ const IndexCoinsList = () => {
         setIsLoading(true);
         const response = await coinGecko.get('/coins/markets', {
           params: {
-            vs_currency: 'eur',
+            vs_currency: 'usd',
             per_page: 5,
             page: '1',
             price_change_percentage: '24h',
