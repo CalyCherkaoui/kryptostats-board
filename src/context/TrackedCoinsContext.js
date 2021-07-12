@@ -9,7 +9,7 @@ export const TrackedCoinsListContext = createContext();
 export const TrackedCoinsListContextProvider = (props) => {
   const [CoinsList, setCoinsList] = useState(['bitcoin', 'ethereum', 'dogecoin']);
   // eslint-disable-next-line no-console
-  console.log(props.children);
+  // console.log(props.children);
 
   const deleteCoin = (coin) => {
     setCoinsList(CoinsList.filter(
