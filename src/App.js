@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import Navigation from './components/Navigation';
 import CoinsIndexPage from './pages/CoinsIndexPage';
@@ -12,13 +12,14 @@ function App() {
   return (
     <div className="App">
       <TrackedCoinsListContextProvider>
-        <BrowserRouter>
-          <Navigation />
+        <Navigation />
+        <Switch>
           <Route exact path="/" component={CoinsIndexPage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/tracked" component={TrackedCoinsPage} />
           <Route path="/coininfo/:coinid" component={CoinDetailPage} />
-        </BrowserRouter>
+          <Redirect to="/" />
+        </Switch>
       </TrackedCoinsListContextProvider>
     </div>
   );
