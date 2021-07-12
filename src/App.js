@@ -16,7 +16,6 @@ function App() {
           <Navigation />
           <Route exact path="/" component={CoinsIndexPage} />
           <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/item" component={CoinDetailPage} />
           <Route exact path="/tracked" component={TrackedCoinsPage} />
           <Route path="/coininfo/:coinid" component={CoinDetailPage} />
         </BrowserRouter>
