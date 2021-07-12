@@ -40,9 +40,9 @@ const CoinDetailPage = () => {
           }),
           coinGecko.get('/coins/markets', {
             params: {
-              id: coinid,
+              ids: coinid,
               vs_currency: 'usd',
-              per_page: 5,
+              per_page: 1,
               page: '1',
               price_change_percentage: '24h',
             },
@@ -62,7 +62,7 @@ const CoinDetailPage = () => {
           day: day.data.prices,
           week: week.data.prices,
           year: year.data.prices,
-          info: info.data[0],
+          info: info.data,
           infoImage: info.data[0].image,
           infoCurrentPrice: info.data[0].current_price,
           infoChange24: info.data[0].price_change_percentage_24h,
@@ -78,8 +78,8 @@ const CoinDetailPage = () => {
     [],
   );
   const renderCoinData = () => {
-    // console.log('rendering part');
-    // console.log(coinData);
+    console.log('rendering part');
+    console.log(coinData);
     if (isLoading) {
       return <div className="loading_wrapper">Loading data</div>;
     }

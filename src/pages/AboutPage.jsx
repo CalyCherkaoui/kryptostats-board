@@ -4,7 +4,7 @@ import React from 'react';
 const AboutPage = () => {
   return (
     <div>
-      About
+      <h1>This is a catalogue of a statistics for Cryptocurrencies</h1>
     </div>
   );
 };
