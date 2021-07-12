@@ -1,23 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-/* eslint-disable arrow-body-style */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import coinGecko from '../apis/coinGecko';
 import CoinDetailChart from '../components/CoinDetailChart';
 import CoinDetailInfo from '../components/CoinDetailInfo';
 
-// eslint-disable-next-line arrow-body-style
 const CoinDetailPage = () => {
   const { coinid } = useParams();
   const [coinData, setCoinData] = useState({});
-  // const [coinInfo, setCoinInfo] = useState({});
-  // const [coinChart, setCoinChart] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(
     () => {
       const fetchData = async () => {
-        // setIsLoading(true);
+        setIsLoading(true);
         const [
           day, week, year, info,
         ] = await Promise.all([
@@ -54,13 +50,18 @@ const CoinDetailPage = () => {
         ]);
 
         setCoinData({
-          day,
-          week,
-          year,
-          info,
+          day: day.data.prices,
+          week: week.data.prices,
+          year: year.data.prices,
+          infoImage: info.data.image.small,
+          infoCurrentPrice: info.data.market_data.current_price.usd,
+          infoChange24: info.data.market_data.price_change_24h_in_currency.usd,
+          infoVolume: info.data.market_data.total_volume.usd,
+          infoName: info.data.name,
+          infoSymbol: info.data.symbol,
+          infoDescription: info.data.description.en,
         });
-        console.log('in useEffect');
-        // setIsLoading(false);
+        setIsLoading(false);
       };
       fetchData();
     },
@@ -71,7 +72,15 @@ const CoinDetailPage = () => {
     console.log(coinData);
     return (
       <div className="coin_detail_container">
-        <CoinDetailInfo />
+        <CoinDetailInfo
+          infoImage={coinData.infoImage}
+          infoName={coinData.infoName}
+          infoSymbol={coinData.infoSymbol}
+          infoDescription={coinData.infoDescription}
+          infoCurrentPrice={coinData.infoCurrentPrice}
+          infoChange24={coinData.infoChange24}
+          infoVolume={coinData.infoVolume}
+        />
         <CoinDetailChart />
       </div>
     );

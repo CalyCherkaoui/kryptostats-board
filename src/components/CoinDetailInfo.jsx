@@ -1,43 +1,52 @@
 /* eslint-disable arrow-body-style */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-import React, { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
-// import coinGecko from '../apis/coinGecko';
+import PropTypes from 'prop-types';
+import parse from 'html-react-parser';
 
-const CoinDetailInfo = () => {
-  // const [coinInfo, setCoinInfo] = useState({});
-  // const [isLoading, setIsLoading] = useState(false);
-
+const CoinDetailInfo = ({
+  infoImage,
+  infoName,
+  infoSymbol,
+  infoDescription,
+  infoCurrentPrice,
+  infoChange24,
+  infoVolume,
+}) => {
+  const description = `<p>${infoDescription}</p>`;
+  const parsedDescription = parse(description);
   return (
     <div className="coin_page_info_wrapper">
-      {/* <div className="coin_page_about">
-        <img src={coinInfo.image.small} alt={coinInfo.name} className="coin_page_about_image" />
+      <div className="coin_page_about">
+        <img src={infoImage} alt={infoName} className="coin_page_about_image" />
         <div className="coin_page_name_symbol">
-          <span>{coinInfo.name}</span>
-          <span>{coinInfo.symbol}</span>
-          <span>{coinInfo.description.links}</span>
+          <span>{infoName}</span>
+          <span>{infoSymbol}</span>
         </div>
-        <div className="coin_page_about_description">{coinInfo.description.en}</div>
+        <div className="coin_page_about_description">{parsedDescription}</div>
         <div className="coin_page_data">
           <div className="coin_page_data_current_price">
-            {coinInfo.market_data.current_price.usd}
+            {infoCurrentPrice}
           </div>
           <div className="coin_page_data_total_vol">
-            {coinInfo.market_data.total_volume.usd}
+            {infoVolume}
           </div>
           <div className="coin_page_data_change24h">
-            {coinInfo.description.market_data.price_change_24h_in_currency.usd}
+            {infoChange24}
           </div>
         </div>
-      </div> */}
-      info
+      </div>
     </div>
   );
 };
 
-// CoinDetailInfo.propTypes = {
-//   coinid: PropTypes.string.isRequired,
-// };
+CoinDetailInfo.propTypes = {
+  infoName: PropTypes.string.isRequired,
+  infoSymbol: PropTypes.string.isRequired,
+  infoImage: PropTypes.string.isRequired,
+  infoDescription: PropTypes.string.isRequired,
+  infoCurrentPrice: PropTypes.number.isRequired,
+  infoChange24: PropTypes.number.isRequired,
+  infoVolume: PropTypes.number.isRequired,
+};
 
 export default CoinDetailInfo;
