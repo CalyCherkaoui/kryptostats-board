@@ -78,8 +78,11 @@ const CoinDetailPage = () => {
     [],
   );
   const renderCoinData = () => {
-    console.log('rendering part');
-    console.log(coinData);
+    // console.log('rendering part');
+    // console.log(coinData);
+    if (isLoading) {
+      return <div className="loading_wrapper">Loading data</div>;
+    }
     return (
       <div className="coin_detail_container">
         <CoinDetailInfo
