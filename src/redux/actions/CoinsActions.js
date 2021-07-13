@@ -2,7 +2,7 @@
 import coinGecko from '../../apis/coinGecko';
 
 export const GetCoinsIndexList = (
-  page,
+  pageNum,
   localCurrency,
   priceChangePercentage,
 ) => async (dispatch) => {
@@ -14,7 +14,7 @@ export const GetCoinsIndexList = (
       params: {
         vs_currency: localCurrency,
         per_page: perPage,
-        page,
+        page: pageNum,
         price_change_percentage: priceChangePercentage,
       },
     });
