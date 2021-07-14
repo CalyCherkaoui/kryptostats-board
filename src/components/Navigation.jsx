@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LocalCurrencyFilter from './LocalCurrencyFilter';
+// import LocalCurrencyFilter from './LocalCurrencyFilter';
 
 function Navigation() {
   return (
@@ -15,15 +16,12 @@ function Navigation() {
             <li className="nav_item">
               <Link to="/" className="nav_link">Index</Link>
             </li>
-            <li className="nav_item">
-              <Link to="/tracked" className="nav_link">Tracked Items</Link>
-            </li>
           </ul>
         </div>
       </div>
-      <div className="navigation_right">
-        <LocalCurrencyFilter />
-      </div>
+      {/* <div className="navigation_right">
+        <LocalCurrencyFilter changeLocalCurrency={(val) => console.log(val)} />
+      </div> */}
     </div>
   );
 }
