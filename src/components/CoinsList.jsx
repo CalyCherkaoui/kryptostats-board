@@ -1,44 +1,39 @@
-/* eslint-disable no-console */
-import React, { useEffect } from 'react';
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
-import { GetCoinInfo } from '../redux/actions/CoinsActions';
+import { GetCoinsIndexList } from '../redux/actions/CoinsActions';
+import Coin from './Coin';
 
 const CoinsList = () => {
   const dispatch = useDispatch();
   const coinsList = useSelector((state) => state.CoinsList);
 
-  const FetchData = (
-    page = 1,
-    localCurrency = 'usd',
-    priceChangePercentage = '24h',
-  ) => {
-    dispatch(GetCoinInfo(
-      page,
-      localCurrency,
-      priceChangePercentage,
+  React.useEffect(() => {
+    dispatch(GetCoinsIndexList(
+      1, 'usd', '24h',
     ));
-  };
+  }, []);
 
   const displayData = () => {
     if (!_.isEmpty(coinsList.data)) {
-      return <div className="display_coinslist">Coins</div>;
+      return coinsList.data.map(
+        (coin) => (
+          <Coin coin={coin} key={`key_${coin.id}`} />
+        ),
+      );
     }
 
     if (coinsList.loading) {
-      return <p>Loading data....</p>;
+      return <p>loading..</p>;
     }
 
     if (coinsList.errorMessage !== '') {
-      return <p>{coinsList.errorMessage}</p>;
+      return <p>error</p>;
     }
-    console.log(coinsList);
-    return 'Error!';
-  };
 
-  useEffect(() => {
-    FetchData(1, 'usd', '24h');
-  }, []);
+    return <p>default</p>;
+  };
 
   return (
     <div>
