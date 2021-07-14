@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 import { IconContext } from 'react-icons';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
+import _ from 'lodash';
 import { GetCoinInfo } from '../redux/actions/CoinsActions';
 
 const CoinDetailInfo = () => {
@@ -32,7 +33,7 @@ const CoinDetailInfo = () => {
 
   const displayData = () => {
     const coin = coinInfo.data[coinid];
-    if (coin) {
+    if (!_.isEmpty(coin)) {
       const parsedDescription = parse(coin.description.en);
       const Cimage = coin.image.large;
       const Cname = coin.name;
@@ -80,7 +81,7 @@ const CoinDetailInfo = () => {
       return <p>error</p>;
     }
 
-    return <p>default</p>;
+    return <p>No Data available for your input...</p>;
   };
 
   return (
