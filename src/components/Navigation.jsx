@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 import SearchBar from './SearchBar';
-// import LocalCurrencyFilter from './LocalCurrencyFilter';
 
 function Navigation() {
   return (
