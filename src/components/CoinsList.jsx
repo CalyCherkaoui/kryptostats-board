@@ -2,11 +2,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
+import ReactPaginate from 'react-paginate';
 import { GetCoinsIndexList } from '../redux/actions/CoinsActions';
 import Coin from './Coin';
-import Pagination from './Pagination';
-import ReactPaginate from 'react-paginate';
-
 
 const CoinsList = () => {
   const dispatch = useDispatch();
@@ -20,19 +18,21 @@ const CoinsList = () => {
 
   React.useEffect(() => {
     fetchData(1);
+    // eslint-disable-next-line no-console
+    console.log(coinsList);
   }, []);
 
   const displayData = () => {
+    if (coinsList.loading) {
+      return <p>loading..</p>;
+    }
+
     if (!_.isEmpty(coinsList.data)) {
       return coinsList.data.map(
         (coin) => (
           <Coin coin={coin} key={`key_${coin.id}`} />
         ),
       );
-    }
-
-    if (coinsList.loading) {
-      return <p>loading..</p>;
     }
 
     if (coinsList.errorMessage !== '') {
@@ -50,9 +50,13 @@ const CoinsList = () => {
       <div className="pagination_wrapper">
         {!_.isEmpty(coinsList.data)
         && (
-        <Pagination
-          count={100}
-          fetchData={(dataPg) => fetchData(dataPg.selected + 1)}
+        <ReactPaginate
+          // pageCount={Math.ceil(coinsList.data.length / 6)}
+          pageCount={100}
+          pageRangeDisplayed={1}
+          marginPagesDisplayed={2}
+          onPageChange={(data) => fetchData(data.selected + 1)}
+          containerClassName="pagination_container"
         />
         )}
       </div>
