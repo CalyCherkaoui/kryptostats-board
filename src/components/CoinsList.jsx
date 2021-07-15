@@ -4,15 +4,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import { GetCoinsIndexList } from '../redux/actions/CoinsActions';
 import Coin from './Coin';
+import Pagination from './Pagination';
+import ReactPaginate from 'react-paginate';
+
 
 const CoinsList = () => {
   const dispatch = useDispatch();
   const coinsList = useSelector((state) => state.CoinsList);
 
-  React.useEffect(() => {
+  const fetchData = (page = 1) => {
     dispatch(GetCoinsIndexList(
-      1, 'usd', '24h',
+      page, 'usd', '24h',
     ));
+  };
+
+  React.useEffect(() => {
+    fetchData(1);
   }, []);
 
   const displayData = () => {
@@ -36,8 +43,19 @@ const CoinsList = () => {
   };
 
   return (
-    <div>
-      {displayData()}
+    <div className="coins_list_container">
+      <div className="coins_list">
+        {displayData()}
+      </div>
+      <div className="pagination_wrapper">
+        {!_.isEmpty(coinsList.data)
+        && (
+        <Pagination
+          count={100}
+          fetchData={(dataPg) => fetchData(dataPg.selected + 1)}
+        />
+        )}
+      </div>
     </div>
   );
 };
