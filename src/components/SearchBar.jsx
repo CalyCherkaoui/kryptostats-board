@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
 const SearchBar = (props) => {
@@ -20,4 +21,4 @@ const SearchBar = (props) => {
 //   history: PropTypes.arrayOf.isRequired,
 // };
 
-export default SearchBar;
+export default withRouter(SearchBar);
