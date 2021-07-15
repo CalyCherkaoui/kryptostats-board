@@ -6,13 +6,11 @@ const LocalCurrencyFilter = ({ changeLocalCurrency }) => {
   const localCurrencies = [
     { name: 'USD', keyApi: 'usd' },
     { name: 'EUR', keyApi: 'eur' },
-    { name: 'MAD', keyApi: 'mad' },
     { name: 'JPY', keyApi: 'jpy' },
+    { name: 'CAD', keyApi: 'cad' },
+    { name: 'BTC', keyApi: 'btc' },
+    { name: 'ETH', keyApi: 'eth' },
   ];
-
-  const handleChangeLocalCurrency = (e) => {
-    changeLocalCurrency(e.target.value);
-  };
 
   return (
     <div className="local_currency_filter_wrapper">
@@ -20,7 +18,7 @@ const LocalCurrencyFilter = ({ changeLocalCurrency }) => {
         name="local_currency"
         id="local_currency"
         className="local_currency"
-        onChange={handleChangeLocalCurrency}
+        onChange={(e) => changeLocalCurrency(e.target.value)}
       >
         {
           localCurrencies.map(
