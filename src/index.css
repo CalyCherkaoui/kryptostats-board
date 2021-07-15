@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +10,77 @@
 }
 
 :root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --warm-grey: #888;
+  --black-two: #121212;
   --white: #fff;
+  --dodger-blue: #379cf6;
+  --medium-blue: #307bbe;
+  --azure: #0290ff;
+  --black-5: rgba(0, 0, 0, 0.05);
 }
 
 #root {
   height: 100vh;
   overflow: hidden;
   border: crimson solid 3px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_space_between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_start_bl {
+  justify-content: start;
+  align-items: baseline;
+}
+
+.flex_start {
+  justify-content: start;
+  align-items: center;
+}
+
+.flex_end {
+  justify-content: end;
+  align-items: center;
+}
+
+.normal_typography {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.bold_typography {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.input_typography {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
 }
