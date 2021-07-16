@@ -20,10 +20,10 @@ function Navigation() {
         </p>
         <ul className="flex_row flex_start_bl">
           <li className={styles.nav_item}>
-            <Link to="/about" className={styles.nav_link}>ABOUT</Link>
+            <Link to="/about" className={`${styles.nav_link} spaced_typography`}>ABOUT</Link>
           </li>
           <li className={styles.nav_item}>
-            <Link to="/" className={styles.nav_link}>CRYPTO-LIST</Link>
+            <Link to="/" className={`${styles.nav_link} spaced_typography`}>CRYPTO-LIST</Link>
           </li>
         </ul>
       </div>

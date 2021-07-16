@@ -21,12 +21,7 @@
 }
 
 .nav_link {
-  font-family: 'Roboto Slab', serif;
   color: var(--black-two);
-  letter-spacing: 0.938px;
-  font-size: 0.8rem;
-  line-height: 23px;
-  font-weight: 450;
   text-transform: uppercase;
   position: relative;
 }

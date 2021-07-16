@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
+import styles from '../styles/Coin.module.css';
 
 const Coin = ({ coin }) => {
   const upDownIconRender = () => {
@@ -22,17 +23,25 @@ const Coin = ({ coin }) => {
   };
 
   return (
-    <Link to={`/coininfo/${coin.id}`}>
-      <li className="coinlist_item">
-        <img src={coin.image} alt={coin.name} className="coinlist_item_image" />
-        <span className="coinlist_item_price">{coin.current_price}</span>
-        <span className="coinlist_item_change">
-          <i className="upDown_icon">
-            { upDownIconRender()}
-          </i>
-          {coin.price_change_percentage_24h}
-        </span>
-      </li>
+    <Link to={`/coininfo/${coin.id}`} className={`${styles.coin_wrapper} shadowed_small flex_space_even`}>
+      <img src={coin.image} alt={coin.name} className={styles.coinlist_item_image} />
+      <div className={`${styles.coin_info_wrapper} flex_col flex_center`}>
+        <div className={`${styles.coinlist_item_info} flex_col flex_center`}>
+          <div className={`${styles.coin_legend} normal_typography`}>Price:</div>
+          <div className={`${styles.coin_data} spaced_typography`}>
+            {coin.current_price}
+          </div>
+        </div>
+        <div className={`${styles.coinlist_item_info} flex_col flex_center`}>
+          <div className={`${styles.coin_legend} normal_typography`}>Daily Change:</div>
+          <div className={`${styles.coin_data} spaced_typography`}>
+            <i className={styles.updouwn_icon}>
+              { upDownIconRender()}
+            </i>
+            {coin.price_change_percentage_24h}
+          </div>
+        </div>
+      </div>
     </Link>
   );
 };

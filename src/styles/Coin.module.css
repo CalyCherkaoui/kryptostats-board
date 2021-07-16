@@ -1,0 +1,35 @@
+.coin_wrapper {
+  border: brown 2px solid;
+  height: 35%;
+  width: 45%;
+  display: inline-flex;
+  padding: 1rem;
+}
+
+.coinlist_item_image {
+  height: 8rem;
+  width: 8rem;
+}
+
+/* .coin_info_wrapper {
+  background-color: brown;
+} */
+
+.coinlist_item_info {
+  margin-top: 1rem;
+}
+
+.coin_legend {
+  color: var(--black-two);
+  font-size: 1rem;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.coin_data {
+  font-size: 1.2rem;
+}
+
+.updouwn_icon {
+  size: 1rem;
+  margin-right: 0.5rem;
+}
