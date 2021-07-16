@@ -1,21 +1,11 @@
 .navigation_bar {
-  /* border: coral 3px solid; */
   padding: 0 1rem;
-  height: 4.5rem;
+  height: 5rem;
 }
-
-/* .navigation_left {
-  border:cornflowerblue 3px solid;
-}
-
-.navigation_right {
-  border: darkgoldenrod 3px solid;
-} */
 
 .nav_logo {
   margin-right: 1.5rem;
-  font-size: 1.6rem;
-  /* font-family: "Montserrat", sans-serif; */
+  font-size: 2rem;
   font-family: 'Roboto Slab', serif;
   letter-spacing: normal;
   color: var(--azure);
@@ -24,10 +14,42 @@
 .nav_logo_emph {
   font-size: 0.9rem !important;
   color: var(--bubble-gum-pink);
-  text-transform:capitalize;
 }
 
 .nav_item {
+  margin: 0 0.4rem;
+}
+
+.nav_link {
+  font-family: 'Roboto Slab', serif;
   color: var(--black-two);
-  margin: 0 0.2rem;
+  letter-spacing: 0.938px;
+  font-size: 0.8rem;
+  line-height: 23px;
+  font-weight: 450;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav_link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--bubble-gum-pink);
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform ease-in-out 0.5s;
+}
+
+.nav_link:hover {
+  color: var(--bubble-gum-pink);
+  animation: fading 1s ease-out 0s;
+}
+
+.nav_link:hover::after {
+  transform: scale(1, 1);
 }
