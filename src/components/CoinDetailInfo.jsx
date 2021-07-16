@@ -7,6 +7,9 @@ import { IconContext } from 'react-icons';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 import _ from 'lodash';
 import { GetCoinInfo } from '../redux/actions/CoinsActions';
+import styles from '../styles/CoinDetail.module.css';
+import stylesCoin from '../styles/Coin.module.css';
+import stylesCoinsList from '../styles/CoinsList.module.css';
 
 const CoinDetailInfo = () => {
   const { coinid } = useParams();
@@ -43,30 +46,38 @@ const CoinDetailInfo = () => {
       const priceChange = coin.market_data.price_change_percentage_24h;
 
       return (
-        <div className="coin_info_container">
-          <div className="coin_info_header">
-            <div className="coin_info_header_left">
-              <img src={Cimage} alt={Cname} className="coin_info_image" />
+        <div className={styles.coin_detail_container}>
+          <div className={`${styles.coin_info_header} flex_row flex_center`}>
+            <div className={styles.coin_info_header_left}>
+              <img src={Cimage} alt={Cname} className={stylesCoin.coinlist_item_image} />
             </div>
-            <div className="coin_info_header_right">
-              <p>
+            <div className={styles.coin_info_header_right}>
+              <p className={styles.coin_info_title}>
                 {Cname}
-                <span>|</span>
+                <span> | </span>
                 {Csymbol}
               </p>
-              <div className="coin_info_market">
-                <div className="coin_info_current_price">{currentPrice}</div>
-                <div className="coin_info_change_percent">
-                  <i className="upDown_icon">
-                    { upDownIconRender(priceChange)}
-                  </i>
-                  {priceChange}
+              <div className={styles.coin_info_market}>
+                <div className={`${stylesCoin.coin_info_wrapper} flex_col flex_center`}>
+                  <div className={`${stylesCoin.coin_legend} normal_typography`}>Price:</div>
+                  <div className={`${stylesCoin.coin_data} spaced_typography`}>
+                    {currentPrice}
+                  </div>
                 </div>
+                <div className={`${stylesCoin.coinlist_item_info} flex_col flex_center`}>
+                  <div className={`${stylesCoin.coin_legend} normal_typography`}>Daily Change:</div>
+                  <div className={`${stylesCoin.coin_data} spaced_typography`}>
+                    <i className={stylesCoin.updouwn_icon}>
+                      { upDownIconRender(priceChange)}
+                    </i>
+                    {priceChange}
+                  </div>
+                </div>
+                <p className={styles.coin_detail_link}>{Clink}</p>
               </div>
-              <p>{Clink}</p>
             </div>
           </div>
-          <div className="coin_info_text">
+          <div className={`${styles.coin_description} normal_typography`}>
             {parsedDescription}
           </div>
         </div>
@@ -74,14 +85,14 @@ const CoinDetailInfo = () => {
     }
 
     if (coinInfo.loading) {
-      return <p>loading..</p>;
+      return <p className={stylesCoinsList.loading}>Loading..</p>;
     }
 
     if (coinInfo.errorMessage !== '') {
-      return <p>error</p>;
+      return <p className={stylesCoinsList.error}>Error Loading data!</p>;
     }
 
-    return <p>No Data available for your input...</p>;
+    return <p className={stylesCoinsList.nodata}>No Data available for your input...</p>;
   };
 
   return (

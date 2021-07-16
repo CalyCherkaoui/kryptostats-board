@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import './App.css';
 import Navigation from './components/Navigation';
 import AboutPage from './pages/AboutPage';
 import CoinDetailPage from './pages/CoinDetailPage';
 import CoinsList from './components/CoinsList';
+import styles from './styles/App.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={`${styles.App} shadowed_big`}>
       <Navigation />
       <Switch>
         <Route exact path="/" component={CoinsList} />

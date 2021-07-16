@@ -1,6 +1,7 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import styles from '../styles/Filter.module.css';
 
 const LocalCurrencyFilter = ({ changeLocalCurrency }) => {
   const localCurrencies = [
@@ -13,17 +14,24 @@ const LocalCurrencyFilter = ({ changeLocalCurrency }) => {
   ];
 
   return (
-    <div className="local_currency_filter_wrapper">
+    <div className={`${styles.filter_wrapper} flex_row`}>
+      <div className={`${styles.filter_legend} spaced_typography`}>Convert prices to:</div>
       <select
         name="local_currency"
         id="local_currency"
-        className="local_currency"
+        className={styles.filter_selector}
         onChange={(e) => changeLocalCurrency(e.target.value)}
       >
         {
           localCurrencies.map(
             (currency) => (
-              <option value={currency.keyApi} key={currency.keyApi}>{currency.name}</option>
+              <option
+                value={currency.keyApi}
+                key={currency.keyApi}
+                className={styles.filter_option}
+              >
+                {currency.name}
+              </option>
             ),
           )
         }

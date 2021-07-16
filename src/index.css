@@ -1,27 +1,145 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Raleway&display=swap');
+
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --warm-grey: #888;
+  --black-two: #121212;
+  --white: #fff;
+  --dodger-blue: #379cf6;
+  --medium-blue: #307bbe;
+  --azure: #0290ff;
+  --black-5: rgba(0, 0, 0, 0.05);
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+  border: crimson solid 3px;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_space_between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_space_even {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flex_start_bl {
+  justify-content: start;
+  align-items: baseline;
+}
+
+.flex_start {
+  justify-content: start;
+  align-items: center;
+}
+
+.flex_center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_end {
+  justify-content: end;
+  align-items: center;
+}
+
+.flex_bottom {
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.normal_typography {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.bold_typography {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.input_typography {
+  letter-spacing: -0.15px;
+}
+
+.spaced_typography {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.938px;
+  font-size: 0.8rem;
+  line-height: 23px;
+  font-weight: 450;
+}
+
+.shadowed_small {
+  -webkit-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+  -moz-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+  box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+}
+
+.shadowed_big {
+  -webkit-box-shadow: 13px 17px 50px 5px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 13px 17px 50px 5px rgba(0, 0, 0, 0.33);
+  box-shadow: 13px 17px 50px 5px rgba(0, 0, 0, 0.33);
 }

@@ -1,0 +1,45 @@
+.loading {
+  font-size: 2rem;
+  color: var(--medium-blue);
+  font-family: 'Abril Fatface', cursive;
+}
+
+.error {
+  font-size: 2rem;
+  color: red;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.nodata {
+  font-size: 2rem;
+  color: var(--bubble-gum-pink);
+  font-family: 'Abril Fatface', cursive;
+}
+
+.coins_list {
+  margin: auto;
+  text-align: center;
+}
+
+.coin_list_filters {
+  height: 3rem;
+  padding-left: 1.5rem;
+}
+
+.pagination_wrapper {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination_container {
+  width: 100%;
+  font-size: 1.3rem;
+  color: var(--medium-blue);
+  font-family: 'Roboto Slab', serif;
+}
+
+.pagination_container li:hover {
+  cursor: pointer;
+  color: var(--bubble-gum-pink);
+}
