@@ -8,7 +8,7 @@ import styles from './styles/App.module.css';
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className={`${styles.App} shadowed_big`}>
       <Navigation />
       <Switch>
         <Route exact path="/" component={CoinsList} />
