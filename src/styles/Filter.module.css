@@ -1,0 +1,18 @@
+/* .filter_wrapper {
+  background-color: cornflowerblue;
+} */
+
+.filter_legend {
+  margin-right: 1rem;
+  color: var(--medium-blue);
+}
+
+.filter_selector {
+  border: var( --black-5) solid 2px;
+  width: 12rem;
+  color: var(--medium-blue);
+}
+
+.filter_option {
+  color: var(--medium-blue);
+}
