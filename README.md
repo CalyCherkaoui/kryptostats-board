@@ -36,7 +36,7 @@ This project was built following the specifications and user stories given here:
 [Link to the deployed app](https://kryptostats-board.herokuapp.com/)
 
 ## Walkthrough video presentation
-[Check here the Video presentation]()
+[Check here the Video presentation part](https://www.loom.com/share/c14c2822d71b4567a5015372f560c4cc)
 
 ## Screenshots
 <br>

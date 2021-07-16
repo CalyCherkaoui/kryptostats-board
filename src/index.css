@@ -27,7 +27,6 @@
 #root {
   height: 100vh;
   overflow: hidden;
-  border: crimson solid 3px;
 }
 
 @keyframes fading {
