@@ -40,8 +40,8 @@ This project was built following the specifications and user stories given here:
 
 ## Screenshots
 <br>
-<img width="380" src="./public/screenshots/coinsList.png">  <img width="380" src="./public/screenshots/About.png">
-<img width="380" src="./public/screenshots/coinDetail.png">
+<img width="300" src="./public/screenshots/coinsList.png">  <img width="300" src="./public/screenshots/About.png">
+<img width="300" src="./public/screenshots/coinDetail.png">
 <br>
 
 ## Dependencies
