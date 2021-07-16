@@ -8,6 +8,7 @@ import { GetCoinsIndexList } from '../redux/actions/CoinsActions';
 import { GetWithLocalCurrencyFilter } from '../redux/actions/FiltresActions';
 import Coin from './Coin';
 import LocalCurrencyFilter from './LocalCurrencyFilter';
+import styles from '../styles/CoinsList.module.css';
 
 const CoinsList = () => {
   const dispatch = useDispatch();
@@ -53,7 +54,7 @@ const CoinsList = () => {
 
   const displayData = (myCoinsList) => {
     if (myCoinsList.loading) {
-      return <p>loading..</p>;
+      return <p className={styles.loading}>loading data......</p>;
     }
 
     if (!_.isEmpty(myCoinsList.data)) {
@@ -65,10 +66,10 @@ const CoinsList = () => {
     }
 
     if (myCoinsList.errorMessage !== '') {
-      return <p>error</p>;
+      return <p className={styles.error}>Error Loading Data!</p>;
     }
 
-    return <p>default</p>;
+    return <p className={styles.nodata}>NO Data Available...</p>;
   };
 
   const showList = () => {
@@ -79,23 +80,22 @@ const CoinsList = () => {
   };
 
   return (
-    <div className="coins_list_container">
-      <div className="coin_list_filters">
+    <div className={styles.coins_list_container}>
+      <div className={`${styles.coin_list_filters} flex_row flex_start`}>
         <LocalCurrencyFilter changeLocalCurrency={changeLocalCurrencyHandler} />
       </div>
-      <div className="coins_list">
+      <div className={styles.coins_list}>
         { showList() }
       </div>
-      <div className="pagination_wrapper">
+      <div className={`${styles.pagination_wrapper}`}>
         {!_.isEmpty(coinsList.data)
         && (
         <ReactPaginate
-          // pageCount={Math.ceil(coinsList.data.length / 6)}
           pageCount={100}
           pageRangeDisplayed={1}
           marginPagesDisplayed={2}
           onPageChange={(data) => fetchDataPaginator(data.selected + 1)}
-          containerClassName="pagination_container"
+          containerClassName={`${styles.pagination_container} flex_row flex_space_even normal_typography`}
         />
         )}
       </div>

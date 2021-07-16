@@ -1,19 +1,21 @@
 .coin_wrapper {
-  border: brown 2px solid;
+  /* border: brown 2px solid; */
   height: 35%;
   width: 45%;
   display: inline-flex;
   padding: 1rem;
+  margin: 0.5rem;
+}
+
+.coin_wrapper:hover {
+  cursor: pointer;
+  background-color: var(--dodger-blue);
 }
 
 .coinlist_item_image {
   height: 8rem;
   width: 8rem;
 }
-
-/* .coin_info_wrapper {
-  background-color: brown;
-} */
 
 .coinlist_item_info {
   margin-top: 1rem;
