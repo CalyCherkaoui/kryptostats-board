@@ -6,10 +6,11 @@
 }
 
 .about_frame {
-  width:  65vh;
+  width: 65vh;
   height: 65vh;
   border: var(--bubble-gum-pink) 8px solid;
   padding: 5rem;
+
   /* margin: auto auto; */
 }
 
