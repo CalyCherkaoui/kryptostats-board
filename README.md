@@ -40,7 +40,7 @@ This project was built following the specifications and user stories given here:
 
 ## Screenshots
 <br>
-<span><img width="300" src="./public/screenshots/coinsList.png"></span><span><img width="300" src="./public/screenshots/About.png"></span><span><img width="300" src="./public/screenshots/coinDetail.png"></span>
+<span><img width="380" src="./public/screenshots/coinsList.png"></span>&nbsp &nbsp<span><img width="380" src="./public/screenshots/About.png"></span><span><img width="380" src="./public/screenshots/coinDetail.png"></span>
 <br>
 
 ## Dependencies
