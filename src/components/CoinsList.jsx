@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
@@ -39,17 +37,10 @@ const CoinsList = () => {
       1, currency, '24h',
     ));
     setLocalCurrency(currency);
-    console.log(currency);
-    console.log('filtred handler');
-    console.log(filteredCoinsByLocalCurrency.data);
   };
 
   React.useEffect(() => {
     fetchData(1);
-    console.log('coinslist');
-    console.log(coinsList);
-    console.log('filtred useeffect');
-    console.log(filteredCoinsByLocalCurrency.data);
   }, [filteredCoinsByLocalCurrency]);
 
   const displayData = (myCoinsList) => {
