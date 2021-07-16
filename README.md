@@ -40,7 +40,7 @@ This project was built following the specifications and user stories given here:
 
 ## Screenshots
 <br>
-<img width="380" src="./screenshots/gameScreenShot1.png"><img width="380" src="./screenshots/gameScreenShot2.png">
+<span><img width="380" src="./public/screenshots/coinsList.png"></span>&nbsp &nbsp<span><img width="380" src="./public/screenshots/About.png"></span><span><img width="380" src="./public/screenshots/coinDetail.png"></span>
 <br>
 
 ## Dependencies
@@ -71,6 +71,21 @@ Iportant Gems and dependencies used in this web application:
     <tr>
     <td>Prop-types</td>
     <td>Runtime type checking for React props</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  </tr>
+  <tr>
+    <td>Redux Thunk</td>
+    <td>Middleware for basic Redux side effects logic</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Axios</td>
+    <td>Promise based HTTP client for the browser and node.js</td>
     <td>⭐️</td>
     <td></td>
     <td></td>

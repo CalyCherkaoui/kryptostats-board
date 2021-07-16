@@ -1,0 +1,54 @@
+.coin_detail_container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.coin_info_header {
+  width: 100%;
+  padding: 1rem;
+  border: var(--bubble-gum-pink) 8px solid;
+}
+
+.coin_info_header_left {
+  width: 40%;
+}
+
+.coin_info_header_right {
+  margin-bottom: 1rem;
+}
+
+.coin_info_title {
+  margin-right: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: normal;
+  color: var(--black-two);
+  font-family: 'Abril Fatface', cursive;
+}
+
+.coin_info_market {
+  text-align: center;
+}
+
+.coin_detail_link {
+  font-family: 'Abril Fatface', cursive;
+  color: var(--medium-blue);
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.coin_description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: var(--black-two);
+  margin-top: 1rem;
+  overflow-y: auto;
+}
+
+.coin_description a {
+  cursor: pointer;
+  color: var(--medium-blue);
+}

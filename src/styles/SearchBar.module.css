@@ -1,0 +1,32 @@
+.search_bar_input {
+  padding: 8px 8px;
+  height: 1.8rem;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+}
+
+.search_bar_input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--pinkish-grey);
+}
+
+.search_bar_button {
+  height: 1.8rem;
+  border: none;
+  padding: 8px 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  background-color: var(--medium-blue);
+  color: var(--white);
+}
