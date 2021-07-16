@@ -1,0 +1,27 @@
+.aboutpage_wrapper {
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_frame {
+  width:  65vh;
+  height: 65vh;
+  border: var(--bubble-gum-pink) 8px solid;
+  padding: 5rem;
+  /* margin: auto auto; */
+}
+
+.aboutpage_text {
+  font-size: 2rem;
+  overflow-wrap: break-word;
+  color: var(--azure);
+  text-transform: uppercase;
+}
+
+.about_icon {
+  font-size: 2rem;
+  color: var(--black-two);
+  margin-left: 0.5rem;
+}
