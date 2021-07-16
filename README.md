@@ -33,7 +33,7 @@ This project was built following the specifications and user stories given here:
 - [License](#license)
 
 ## Live demo
-[Link to the deployed app](https://kryptonite-catalogue.herokuapp.com/)
+[Link to the deployed app](https://kryptostats-board.herokuapp.com/)
 
 ## Walkthrough video presentation
 [Check here the Video presentation]()
