@@ -27,14 +27,12 @@
 }
 
 .pagination_wrapper {
-  /* background-color: cyan; */
   height: 4rem;
   display: flex;
   justify-content: center;
 }
 
 .pagination_container {
-  /* border: darkblue solid 2px; */
   width: 100%;
   font-size: 1.3rem;
   color: var(--medium-blue);
