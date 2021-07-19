@@ -12,12 +12,16 @@ const AboutPage = () => (
         This is a catalogue of a statistics for Cryptocurrencies
       </h1>
       <div className={styles.about_icons}>
-        <IconContext.Provider value={{ className: `${styles.about_icon}` }}>
-          <AiFillGithub />
-        </IconContext.Provider>
-        <IconContext.Provider value={{ className: `${styles.about_icon}` }}>
-          <FiLinkedin />
-        </IconContext.Provider>
+        <a href="https://github.com/CalyCherkaoui/kryptostats-board" className={styles.about_icons_link}>
+          <IconContext.Provider value={{ className: `${styles.about_icon}` }}>
+            <AiFillGithub />
+          </IconContext.Provider>
+        </a>
+        <a href="https://www.linkedin.com/in/houda-cherkaoui-64106395/" className={styles.about_icons_link}>
+          <IconContext.Provider value={{ className: `${styles.about_icon}` }}>
+            <FiLinkedin />
+          </IconContext.Provider>
+        </a>
       </div>
     </div>
   </div>
