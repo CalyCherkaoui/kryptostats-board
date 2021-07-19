@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctely App component Matches App snapshot 1`] = `
+<div
+  className="App shadowed_big"
+>
+  <div
+    className="navigation_bar flex_row flex_space_between shadowed_small"
+  >
+    <div
+      className="navigation_left flex_row flex_start_bl"
+    >
+      <p
+        className="nav_logo bold_typography"
+      >
+        Krypto|
+        <span
+          className="nav_logo_emph"
+        >
+          <svg
+            className="logo_icon"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="8"
+              cy="8"
+              r="8"
+            />
+          </svg>
+        </span>
+      </p>
+      <ul
+        className="flex_row flex_start_bl"
+      >
+        <li
+          className="nav_item"
+        >
+          <a
+            className="nav_link spaced_typography"
+            href="/about"
+            onClick={[Function]}
+          >
+            ABOUT
+          </a>
+        </li>
+        <li
+          className="nav_item"
+        >
+          <a
+            className="nav_link spaced_typography"
+            href="/"
+            onClick={[Function]}
+          >
+            CRYPTO-LIST
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="navigation_right"
+    >
+      <div
+        className="search_bar_container"
+      >
+        <input
+          className="search_bar_input normal_typography"
+          onChange={[Function]}
+          placeholder="Search Crypto"
+          type="text"
+        />
+        <button
+          className="search_bar_button"
+          onClick={[Function]}
+          type="button"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="coins_list_container"
+  >
+    <div
+      className="coin_list_filters flex_row flex_start"
+    >
+      <div
+        className="filter_wrapper flex_row"
+      >
+        <div
+          className="filter_legend spaced_typography"
+        >
+          Convert prices to:
+        </div>
+        <select
+          className="filter_selector"
+          id="local_currency"
+          name="local_currency"
+          onChange={[Function]}
+        >
+          <option
+            className="filter_option"
+            value="usd"
+          >
+            USD
+          </option>
+          <option
+            className="filter_option"
+            value="eur"
+          >
+            EUR
+          </option>
+          <option
+            className="filter_option"
+            value="jpy"
+          >
+            JPY
+          </option>
+          <option
+            className="filter_option"
+            value="cad"
+          >
+            CAD
+          </option>
+          <option
+            className="filter_option"
+            value="btc"
+          >
+            BTC
+          </option>
+          <option
+            className="filter_option"
+            value="eth"
+          >
+            ETH
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      className="coins_list"
+    >
+      <p
+        className="nodata"
+      >
+        NO Data Available...
+      </p>
+    </div>
+    <div
+      className="pagination_wrapper"
+    />
+  </div>
+</div>
+`;
