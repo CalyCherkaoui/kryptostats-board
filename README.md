@@ -111,6 +111,41 @@ Important dependencies used in this web application:
     <td>⭐️</td>
     <td></td>
   </tr>
+  <tr>
+    <td>Enzyme</td>
+    <td>JavaScript Testing utility for React</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Enzyme-adapter-react-16</td>
+    <td>Adapter to use Enzyme with React 17</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>react-addons-test-utils</td>
+    <td>React Test Utilities library</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>react-test-renderer</td>
+    <td>To make snapshots of the "DOM tree" rendered by a React DOM</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>redux-mock-store</td>
+    <td>Allows to make a redux store for testing.</td>
+    <td></td>
+    <td>⭐️</td>
+    <td></td>
+  </tr>
 </table>
 
 ## Linting tools
