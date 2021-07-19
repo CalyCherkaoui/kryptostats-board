@@ -33,10 +33,10 @@ This project was built following the specifications and user stories given here:
 - [License](#license)
 
 ## Live demo
-[Link to the deployed app](https://kryptostats-board.herokuapp.com/)
+[Link to the deployed App](https://kryptostats-board.herokuapp.com/)
 
 ## Walkthrough video presentation
-[Check here the Video presentation part](https://www.loom.com/share/c14c2822d71b4567a5015372f560c4cc)
+[Check here a Video presentation of the project](https://www.loom.com/share/c14c2822d71b4567a5015372f560c4cc)
 
 ## Screenshots
 <br>
@@ -44,7 +44,7 @@ This project was built following the specifications and user stories given here:
 <br>
 
 ## Dependencies
-Iportant Gems and dependencies used in this web application:
+Important dependencies used in this web application:
 
 <table>
   <tr>
@@ -102,6 +102,13 @@ Iportant Gems and dependencies used in this web application:
     <td>Javascript linter</td>
     <td>⭐️</td>
     <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jest</td>
+    <td>JavaScript testing framework</td>
+    <td></td>
+    <td>⭐️</td>
     <td></td>
   </tr>
 </table>
