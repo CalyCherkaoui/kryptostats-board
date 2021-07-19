@@ -6,7 +6,7 @@ import App from '../App';
 import store from '../redux/store';
 
 describe(
-  'Renders correctely App component',
+  'Renders correctly App component',
   () => {
     let container;
     beforeEach(() => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders correctely App component Matches App snapshot 1`] = `
+exports[`Renders correctly App component Matches App snapshot 1`] = `
 <div
   className="App shadowed_big"
 >
