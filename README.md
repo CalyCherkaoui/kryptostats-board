@@ -1,7 +1,7 @@
 # Kryptostats-board : a catalogue of statistics for Cryptocurrencies data
 
 ## About the project
-In this project, I built the front-end side of a catalogue of statistics to display general Cryptocurrencies data.
+In this project, I built the front-end side of a catalog of statistics that allows us to display general Cryptocurrencies data.
 The App collects data from an API and displays it in a list of data that can be filtered by character and/or market parameters.
 This project was built following the specifications and user stories given here:
 [Click here to read the projects specifications](https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5)
@@ -37,7 +37,7 @@ This project was built following the specifications and user stories given here:
 [Link to the deployed App](https://kryptostats-board.herokuapp.com/)
 
 ## Walkthrough video presentation
-[Check here a Video presentation of the project](https://www.loom.com/share/c14c2822d71b4567a5015372f560c4cc)
+[Check here a video presentation of the project](https://www.loom.com/share/c14c2822d71b4567a5015372f560c4cc)
 
 ## Screenshots
 <br>
@@ -45,7 +45,7 @@ This project was built following the specifications and user stories given here:
 <br>
 
 ## Dependencies
-Important dependencies used in this web application:
+The main dependencies used in this web application:
 
 <table>
   <tr>
@@ -135,14 +135,14 @@ Important dependencies used in this web application:
   </tr>
   <tr>
     <td>react-test-renderer</td>
-    <td>To make snapshots of the "DOM tree" rendered by a React DOM</td>
+    <td>To take snapshots of the "DOM tree" rendered by a React DOM</td>
     <td></td>
     <td>⭐️</td>
     <td></td>
   </tr>
   <tr>
     <td>redux-mock-store</td>
-    <td>Allows to make a redux store for testing.</td>
+    <td>Allows to make a redux store for testing</td>
     <td></td>
     <td>⭐️</td>
     <td></td>
@@ -169,7 +169,7 @@ Important dependencies used in this web application:
 </table>
 
 ## Getting started in development
-To get a local copy of the repository please run the following commands on your terminal:
+To get a local copy of the repository, please run the following commands on your terminal:
 
 ```
 $ git clone git@github.com:CalyCherkaoui/kryptostats-board.git
@@ -181,17 +181,17 @@ $ npm run build
 $ npm start
 ```
 
-To lint your Js code:
+To lint Js code:
 ```
 $ npx eslint . --fix
 ```
 
-To lint your Style sheets:
+To lint the Styling:
 ```
 $ npx stylelint "**/*.{css,scss}" --fix
 ```
 
-To run your tests:
+To run the tests:
 ```
 $ npm test
 ```
@@ -206,7 +206,7 @@ $ npm test
 - Twitter: [@Houda59579688](https://twitter.com/Houda59579688)
 - Linkedin: [Houda-Cherkaoui](https://www.linkedin.com/in/houda-cherkaoui-64106395/)
 ## Contributing
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 ## Show your support
 Give a ⭐️ if you like this project!
 ## Acknowledgments
@@ -214,5 +214,5 @@ Give a ⭐️ if you like this project!
 - Hat tip to [Microverse](https://www.microverse.org/) TSE for Code Review.
 - Hat tip to anyone whose code was used
 ## 📝 License
-All source codeis available jointly under the MIT License.
+All source code is available jointly under the MIT License.
 See [MIT licence](./LICENSE) for details.
