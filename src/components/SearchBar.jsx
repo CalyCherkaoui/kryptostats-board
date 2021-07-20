@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styles from '../styles/SearchBar.module.css';
 
 const SearchBar = (props) => {
@@ -12,6 +12,10 @@ const SearchBar = (props) => {
       <button className={styles.search_bar_button} type="button" onClick={() => props.history.push(`/coininfo/${search}`)}>Search</button>
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  history: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default withRouter(SearchBar);
