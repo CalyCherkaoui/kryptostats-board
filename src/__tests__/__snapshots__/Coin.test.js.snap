@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders correctly The navigation bar component Matches Coin snapshot 1`] = `
+exports[`Renders correctly the Coin component Matches Coin snapshot 1`] = `
 <a
   className="coin_wrapper shadowed_small flex_space_even"
   href="/coininfo/testcoin"

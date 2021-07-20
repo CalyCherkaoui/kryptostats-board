@@ -5,7 +5,7 @@ import store from '../redux/store';
 import Coin from '../components/Coin';
 
 describe(
-  'Renders correctly The navigation bar component',
+  'Renders correctly the Coin component',
   () => {
     let coin;
     beforeEach(() => {
@@ -27,7 +27,6 @@ describe(
             </Router>
           </Provider>,
         );
-
         expect(rendered).toMatchSnapshot();
       },
     );
