@@ -1,5 +1,3 @@
-// import { describe, expect } from '@jest/globals';
-// import { expect } from '@jest/globals';
 import CoinDetailFixt from '../../fixtures/CoinDetailFixt';
 import CoinInfoReducer from '../../redux/reducers/CoinInfoReducer';
 
