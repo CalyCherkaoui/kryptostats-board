@@ -27,6 +27,7 @@ This project was built following the specifications and user stories given here:
 - [Dependencies](#dependencies)
 - [Linting tools](#linting-tools)
 - [Getting started](#getting-started-in-development)
+- [Automated tests](#automated-tests)
 - [Author](#author)
 - [Contributing](#-Contributing)
 - [Acknowledgments](#acknowledgments)
@@ -185,10 +186,19 @@ To lint your Js code:
 $ npx eslint . --fix
 ```
 
-To lint you Style sheets:
+To lint your Style sheets:
 ```
 $ npx stylelint "**/*.{css,scss}" --fix
 ```
+
+To run your tests:
+```
+$ npm test
+```
+## Automated tests
+<img width="450" src="./public/screenshots/Test.png">
+<br>
+
 ## Author
 👤 **Houda Cherkaoui**
 
