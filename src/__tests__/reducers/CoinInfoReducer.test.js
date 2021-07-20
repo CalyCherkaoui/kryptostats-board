@@ -33,7 +33,6 @@ describe('Coin Detail Info reducer',
         };
 
         const state = CoinInfoReducer(initialState, action);
-        // expect(state.loading).toEqual(false);
         expect(state.data).toMatchObject({
           [action.coinId]: CoinDetailFixt,
         });
