@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly The navigation bar component Matches Pagination snapshot 1`] = `
+<div
+  className="pagination_container"
+>
+  <ul>
+    <li
+      className="previous disabled"
+    >
+      <a
+        aria-disabled="true"
+        aria-label="Previous page"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        rel="prev"
+        role="button"
+        tabIndex="0"
+      >
+        Previous
+      </a>
+    </li>
+    <li
+      className="selected"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        1
+      </a>
+    </li>
+    <li
+      className="next disabled"
+    >
+      <a
+        aria-disabled="true"
+        aria-label="Next page"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        rel="next"
+        role="button"
+        tabIndex="0"
+      >
+        Next
+      </a>
+    </li>
+  </ul>
+</div>
+`;

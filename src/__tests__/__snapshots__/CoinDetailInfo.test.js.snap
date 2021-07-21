@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly CoinDetailInfo component Matches CoinDetailInfo snapshot 1`] = `
+<div>
+  <p
+    className="nodata"
+  >
+    No Data available for your input...
+  </p>
+</div>
+`;

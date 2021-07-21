@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly the Coin component Matches Coin snapshot 1`] = `
+<a
+  className="coin_wrapper shadowed_small flex_space_even"
+  href="/coininfo/testcoin"
+  onClick={[Function]}
+>
+  <img
+    className="coinlist_item_image"
+    src="image_link"
+  />
+  <div
+    className="coin_info_wrapper flex_col flex_center"
+  >
+    <div
+      className="coinlist_item_info flex_col flex_center"
+    >
+      <div
+        className="coin_legend normal_typography"
+      >
+        Price:
+      </div>
+      <div
+        className="coin_data spaced_typography"
+      >
+        1
+      </div>
+    </div>
+    <div
+      className="coinlist_item_info flex_col flex_center"
+    >
+      <div
+        className="coin_legend normal_typography"
+      >
+        Daily Change:
+      </div>
+      <div
+        className="coin_data spaced_typography"
+      >
+        <i
+          className="updouwn_icon"
+        >
+          <svg
+            className="up_icon"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+            />
+          </svg>
+        </i>
+        1
+      </div>
+    </div>
+  </div>
+</a>
+`;

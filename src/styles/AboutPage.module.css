@@ -24,3 +24,15 @@
   color: var(--black-two);
   margin-left: 0.5rem;
 }
+
+.about_icons_link {
+  text-decoration: none;
+}
+
+.about_icons_link:hover {
+  cursor: pointer;
+}
+
+.about_icons_link svg:hover {
+  color: var(--bubble-gum-pink);
+}

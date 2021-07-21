@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly Coin Detail Page container Matches Coin Detail Page snapshot 1`] = `
+<div>
+  <div>
+    <p
+      className="nodata"
+    >
+      No Data available for your input...
+    </p>
+  </div>
+</div>
+`;

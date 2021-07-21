@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly The navigation bar component Matches LocalCurrencyFilter snapshot 1`] = `
+<div
+  className="search_bar_container"
+>
+  <input
+    className="search_bar_input normal_typography"
+    onChange={[Function]}
+    placeholder="Search Crypto"
+    type="text"
+  />
+  <button
+    className="search_bar_button"
+    onClick={[Function]}
+    type="button"
+  >
+    Search
+  </button>
+</div>
+`;
