@@ -2,7 +2,7 @@
 
 ## About the project
 In this project, I built the front-end side of a catalog of statistics that allows us to display general Cryptocurrencies data.
-The App collects data from an API and displays it in a list of data that can be filtered by character and/or market parameters.
+The App collects data from an API and displays it in a list of data that can be filtered by currency parameter.
 This project was built following the specifications and user stories given here:
 [Click here to read the projects specifications](https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5)
 
