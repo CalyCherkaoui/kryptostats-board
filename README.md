@@ -6,6 +6,13 @@ The App collects data from an API and displays it in a list of data that can be 
 This project was built following the specifications and user stories given here:
 [Click here to read the projects specifications](https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5)
 
+### Main features:
+- It requests data from the API with Axios.
+- It displays a list of cryptocurrencies.
+- It displays the data of a selected cryptocurrency.
+- It converts cryptos' prices and changes to the selected local currency.
+- It paginates the API response's results in the display.
+
 ## Built with
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img width="5%" src="https://media.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif" alt="Javascript"></a>
   <a href="#"><img width="10%" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="React"></a>
